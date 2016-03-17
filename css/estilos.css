@@ -1,0 +1,51 @@
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#col-1 {
+	width: 50%;
+	float: left;
+	background-color: #2ecc71;
+}
+
+#col-2 {
+	width: 40%;
+	float: right;
+	background-color: #e74c3c;
+}
+#col-1, #col-2 {
+	padding: 15px;
+}
+
+/*Media Queries de CSS3*/
+
+@media screen and (max-width: 480px) {
+
+	.container {
+		width: 100%;
+	}
+
+	#col-1, #col-2 {
+		width: 90%;
+		float: left;
+	}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+	.container {
+		width: 90%;
+	}
+
+	#col-1, #col-2 {
+		width: 45%;
+		float: left;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.container {
+		width: 85%;
+	}
+	
+}
