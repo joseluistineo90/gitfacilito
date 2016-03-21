@@ -21,8 +21,10 @@
 	<!-- javascript-->
 	<script src="js/modernizr-2.8.3-respond-1.4.2.min" ></
 	script>
+	<script src="./js/jquery-1.11.2.min" ></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js " ></script>
 
-	<script src="js/jquery-1.11.2.min" ></script>
+	
 
 </head>
 <body> 
@@ -32,6 +34,20 @@
 				<img id="logo" src="images/logoDefinitivo.png" alt="logo">
 		</header>
 
+		<nav id="menu">
+		<ul class="clearfix container">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Servicios</a></li>
+		<li><a href="#">Nosotros</a></li>
+		<li><a href="#">Diseño</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contacto</a></li>
+		
+		</ul>
+		<a href="#" id="pull">Menú</a>
+
+		</nav>
+	<!--	
 	<div class="container">
 		<h2>Lorem Ipsum</h2>
 
@@ -49,5 +65,43 @@
 		</div>
 
 	</div>
+
+	-->
 </body> 
+
+	 
+
+
+	<script>
+		$(function() {
+
+			var pull   = $('#pull');
+				menu = $('nav ul');
+				menuHeight = menu.height(); 
+
+
+				$(pull).on('click', function (e){
+					e.preventDefault();
+					menu.slideToggle();
+
+				});
+
+				$(window).resize(function(){
+
+					var w = $(window).width();
+					if(w > 320 && menu.is(':hidden')) {
+						menu.removeAttr('style');
+					}
+
+
+				});
+
+			});
+
+
+	</script> 
+
+
+
+
 </html>

@@ -1,8 +1,87 @@
+body {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+
+}
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom:1;
+}
+
+
+img,video,object {
+	max-width: 100%;
+}
+
+
 .container {
 	width: 960px;
 	margin: 0 auto;
-	font-size: 1em;
+	height: auto;
+	line-height: 180%;
 }
+
+/* Menu de Navegación */
+
+	#menu {
+
+		height: 40px;
+		width: 100%;
+		background-color: #edf;
+		font-weight: bold;
+		border-bottom: 7px solid #d45b69;
+}
+
+#menu ul {
+
+	padding: 0;
+	height: 40px;
+	width: 600px;
+
+}
+
+#menu li {
+	display: inline;
+	float: left;
+}
+
+#menu a {
+	border-right: 1px solid #576969;
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow:  1px 1px 0px #283744;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+#menu li:last-child a {
+	border-right: 5;
+}
+
+#menu a:hover, #menu a:active {
+	background-color: #e74c3c;
+}
+
+#menu a#pull {
+
+	display: none;
+}
+
 
 #col-1 {
 	width: 50%;
@@ -13,7 +92,7 @@
 #col-2 {
 	width: 40%;
 	float: right;
-	background-color: #e74c3c;
+	background-color: #2ecc71;
 }
 #col-1, #col-2 {
 	padding: 15px;
@@ -27,13 +106,61 @@
 		width: 100%;
 	}
 
+	#menu {
+border-bottom: 0;
+
+	}
+
+	#menu ul {
+		display: none;
+		height: auto;
+		width: 100%;
+
+	}
+
+	#menu li {
+
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+
+	#menu a {
+
+		width: 100%;
+	}
+
+	#menu a#pull {
+		display: block;
+		background-color: #283748;
+		width: 100%;
+		position: relative;
+		text-align: left;
+		text-indent: 25px;
+	}
+
+	#menu a#pull:after {
+		content: "";
+		background: url('../images/nav-icon.png') no-repeat;
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		position: absolute;
+		right: 1px;
+		top: 0px;
+	}
+
+
+
+
+
 	#col-1, #col-2 {
 		width: 90%;
 		float: left;
 	}
 
 	#logo {
-		width:70%;
+		width:60%;
 	}
 
 }
@@ -41,6 +168,25 @@
 @media screen and (min-width: 481px) and (max-width: 767px) {
 	.container {
 		width: 90%;
+	}
+
+	#menu {
+		height: auto;
+	}
+
+	#menu ul {
+		width: 100%
+		display:block;
+		height: auto;
+	}
+
+
+
+	#menu li {
+
+		width: 50%;
+		float: left;
+		position: relative;
 	}
 
 	#col-1, #col-2 {
