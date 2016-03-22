@@ -34,7 +34,7 @@ img,video,object {
 
 	#menu {
 
-		height: 40px;
+		height: auto;
 		width: 100%;
 		background-color: #edf;
 		font-weight: bold;
@@ -52,6 +52,7 @@ img,video,object {
 #menu li {
 	display: inline;
 	float: left;
+	background-color: #2ecc71;
 }
 
 #menu a {
@@ -80,6 +81,16 @@ img,video,object {
 #menu a#pull {
 
 	display: none;
+}
+
+#slideshow {
+	width: 100%;
+	height: auto;
+}
+
+.slide {
+	width: 100%;
+	height: auto;
 }
 
 
@@ -160,7 +171,7 @@ border-bottom: 0;
 	}
 
 	#logo {
-		width:60%;
+		width:50%;
 	}
 
 }
@@ -168,6 +179,10 @@ border-bottom: 0;
 @media screen and (min-width: 481px) and (max-width: 767px) {
 	.container {
 		width: 90%;
+	}
+
+	#col-1, #col-2 {
+		width: 43%;
 	}
 
 	#menu {
@@ -187,6 +202,14 @@ border-bottom: 0;
 		width: 50%;
 		float: left;
 		position: relative;
+	}
+
+	#menu  a {
+		border-bottom: 1px solid #576979;
+		border-right:  1px solid #576979;
+		text-align: left;
+		width: 100%;
+		text-indent: 25px;
 	}
 
 	#col-1, #col-2 {

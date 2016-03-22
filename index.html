@@ -23,6 +23,7 @@
 	script>
 	<script src="./js/jquery-1.11.2.min" ></script> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js " ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js"></script>
 
 	
 
@@ -47,6 +48,18 @@
 		<a href="#" id="pull">Menú</a>
 
 		</nav>
+    <!--Sliders-->
+		<section id="slideshow">
+		<div id="slider">
+		<div class="slide"> <img src="images/slideshow/slide1.jpg"  alt="creaciones yanmary"></div>
+		<div class="slide"> <img src="images/slideshow/slide2.jpg"  alt="creaciones yanmary"></div>
+		
+
+		</div>
+
+		<!--in del slider-->
+		</section> 
+		<!--Fin del slideshow-->
 	<!--	
 	<div class="container">
 		<h2>Lorem Ipsum</h2>
@@ -70,7 +83,7 @@
 </body> 
 
 	 
-
+ <!--script desde el cdn de jquery para el menu-->
 
 	<script>
 		$(function() {
@@ -100,6 +113,24 @@
 
 
 	</script> 
+	<!--slider-->
+	<script type="text/javascript">
+$("#slider").carouFredSel({
+	responsive : true,
+	scroll : {
+		fx : "crossfade",
+		easing : "swing",
+		duration : 500,
+
+
+	},
+	items : {
+		visible : 1,
+		height : "27%"
+	}
+});
+
+</script>
 
 
 
